@@ -15,11 +15,11 @@ export function HeroSection() {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0a0a0a]" />
       
-      <div className="relative z-10 container mx-auto px-6 py-20 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-[70vh]">
+      <div className="relative z-10 container mx-auto px-6 pt-28 pb-0 lg:py-32">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-end lg:items-center min-h-[70vh]">
           {/* Left content */}
-          <motion.div 
-            className="space-y-8"
+          <motion.div
+            className="space-y-8 pb-8 lg:pb-0"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -28,20 +28,20 @@ export function HeroSection() {
               <span className="text-2xl">🩺</span>
               <span className="text-sm text-white/70 font-medium">Weboldal Doktor</span>
             </div>
-            
+
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-tight text-balance">
               A weboldalad lehet, hogy{" "}
               <span className="text-[#c9a59a]">nem működik jól.</span>
               <br />
               Megmutatom miért.
             </h1>
-            
+
             <p className="text-lg sm:text-xl text-white/70 max-w-xl leading-relaxed">
               Feltárom, hol veszíted a látogatókat – és milyen javítások segíthetnek jobb eredményeket elérni.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button 
+              <Button
                 onClick={scrollToForm}
                 className="bg-[#c9a59a] hover:bg-[#dbc4bb] text-[#0a0a0a] font-semibold text-lg px-8 py-6 rounded-lg group transition-all duration-300"
               >
@@ -49,33 +49,28 @@ export function HeroSection() {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
-            
+
             <p className="text-sm text-white/50 pt-2">
               Konkrét, érthető javaslatok. Nincs bullshit.
             </p>
           </motion.div>
-          
-          {/* Right - Dr. Detti illustration */}
+
+          {/* Dr. Detti illustration */}
           <motion.div
-            className="relative hidden lg:block"
+            className="relative flex items-end justify-center lg:justify-end"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
-            {/* Glow effect behind image */}
-            <div className="absolute inset-0 flex items-end justify-center pointer-events-none">
-              <div className="w-3/4 h-1/2 bg-[#c9a59a]/20 blur-3xl rounded-full" />
-            </div>
-            <div className="relative flex items-end justify-center">
-              <Image
-                src="/drDetti.png"
-                alt="Dr. Detti – Weboldal Doktor"
-                width={520}
-                height={650}
-                priority
-                className="relative z-10 drop-shadow-2xl"
-              />
-            </div>
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-1/2 bg-[#c9a59a]/20 blur-3xl rounded-full pointer-events-none" />
+            <Image
+              src="/drDetti.png"
+              alt="Dr. Detti – Weboldal Doktor"
+              width={520}
+              height={650}
+              priority
+              className="relative z-10 drop-shadow-2xl w-64 sm:w-80 lg:w-full max-w-sm lg:max-w-none"
+            />
           </motion.div>
         </div>
       </div>
