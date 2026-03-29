@@ -12,7 +12,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="py-24 lg:py-32 bg-background overflow-hidden">
+    <section id="hogyan-mukodik" className="py-24 lg:py-32 bg-background overflow-hidden">
       <div className="container mx-auto px-6">
         <motion.div 
           className="max-w-5xl mx-auto"

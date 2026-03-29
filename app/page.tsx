@@ -12,10 +12,12 @@ import { Testimonials } from "@/components/sections/testimonials"
 import { ContactForm } from "@/components/sections/contact-form"
 import { FloatingCTA } from "@/components/sections/floating-cta"
 import { Footer } from "@/components/sections/footer"
+import { Navbar } from "@/components/navbar"
 
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <Navbar />
       <HeroSection />
       <ValueProposition />
       <ConversionStory />

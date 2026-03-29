@@ -67,7 +67,7 @@ const services = [
 
 export function WhatIDo() {
   return (
-    <section className="py-24 lg:py-32 bg-background">
+    <section id="szolgaltatasok" className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-6">
         <motion.div 
           className="max-w-4xl mx-auto"
